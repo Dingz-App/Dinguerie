@@ -10,6 +10,16 @@ const http = require("http");
 const { Server } = require("socket.io");
 
 
+
+const path = require('path');
+
+// Remplace la route app.get('/', ...) qui dit "server is running" par :
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
+
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
