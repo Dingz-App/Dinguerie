@@ -1,0 +1,14 @@
+{
+  "name": "hottake-server",
+  "version": "1.0.0",
+  "description": "Serveur temps réel pour le jeu Hot Take",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
