@@ -11,12 +11,6 @@ const { Server } = require("socket.io");
 
 
 
-const path = require('path');
-
-// Remplace la route app.get('/', ...) qui dit "server is running" par :
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 
 
@@ -27,6 +21,14 @@ const io = new Server(server, {
 });
 
 const PORT = process.env.PORT || 3000;
+
+
+const path = require('path');
+
+// Remplace la route app.get('/', ...) qui dit "server is running" par :
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // ------------------------------------------------------------
 // État en mémoire : { CODE: Room }
