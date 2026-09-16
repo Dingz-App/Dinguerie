@@ -9,14 +9,7 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 
-//aa
-const path = require('path');
 
-// Remplace la route racine app.get('/', ...) par ceci :
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-//aa
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
